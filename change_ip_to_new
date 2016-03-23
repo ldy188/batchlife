@@ -1,0 +1,25 @@
+::for school network users with a dynamic IP and data limit based on IP.(Maybe only my school =.=)
+::that's to say , find intranet not alive ip  and change host ip to it
+::
+::before using you need to ping x.x.x.x/24 to update arp table
+::root privilege
+::
+::by me :P
+::2016/03/23 
+@echo off
+ECHO [*]getting intranet alive host IP, please wait...
+ECHO [*]got address list...
+set ipset=x.x.x.
+arp -a >arp-a.txt
+set /a num = %RANDOM%%%253+2
+for /l %%i in (%num%,1,254) do (
+    findstr "\<%ipset%%%i\>" arp-a.txt >nul && ECHO %%i|| (ECHO %ipset%%%i available)&&(netsh interface ip set address "±¾µØÁ¬½Ó" static %ipset%%%i 255.255.255.0 x.x.x.x)&&( if 0==0 goto end )
+	)
+ECHO fail to changeip 
+if 1==1 goto end1
+:end 
+ECHO changed to new ip
+ping www.baidu.com -t
+:end1
+ECHO [-]over, please enter [any key] to esc ...
+pause>nul
