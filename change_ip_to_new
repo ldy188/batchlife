@@ -1,11 +1,16 @@
 ::for school network users with a dynamic IP and data limit based on IP.(Maybe only my school =.=)
 ::that's to say , find intranet not alive ip  and change host ip to it
 ::
+::charset == "ansi"
+::"±¾µØÁ¬½Ó" means "本地连接" in chinese
+::
 ::before using you need to ping x.x.x.x/24 to update arp table
 ::root privilege
 ::
 ::by me :P
 ::2016/03/23 
+::
+::---------------------------------
 @echo off
 ECHO [*]getting intranet alive host IP, please wait...
 ECHO [*]got address list...
@@ -23,3 +28,4 @@ ping www.baidu.com -t
 :end1
 ECHO [-]over, please enter [any key] to esc ...
 pause>nul
+::---------------------------------
