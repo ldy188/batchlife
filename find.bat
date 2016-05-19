@@ -20,22 +20,22 @@ rem set kw=呵呵呵
 rem set pwd = %cd%
 
 echo [-]now in %cd%
-echo. >>"C:\Users\eureka\Desktop\out1.txt"
-echo. >>"C:\Users\eureka\Desktop\out1.txt"
+echo. >>"c:\Users\xxx\out.txt"
+echo. >>"c:\Users\xxx\out.txt"
 echo [*]begin searching, don't close...
-echo ============================================================== >>"C:\Users\eureka\Desktop\out1.txt"
-echo -------- %time% begin--------- >>"C:\Users\eureka\Desktop\out1.txt"
-echo ----%cd%---- >>"C:\Users\eureka\Desktop\out1.txt"
-echo ----------搜索 " %kw% "----------->>"C:\Users\eureka\Desktop\out1.txt"
-echo ============================================================== >>"C:\Users\eureka\Desktop\out1.txt"
-echo -------包含" %kw% "的文件如下----- >>"C:\Users\eureka\Desktop\out1.txt"
-echo. >>"C:\Users\eureka\Desktop\out1.txt"
+echo ============================================================== >>"c:\Users\xxx\out.txt"
+echo -------- %time% begin--------- >>"c:\Users\xxx\out.txt"
+echo ----%cd%---- >>"c:\Users\xxx\out.txt"
+echo ----------搜索 " %kw% "----------->>"c:\Users\xxx\out.txt"
+echo ============================================================== >>"c:\Users\xxx\out.txt"
+echo -------包含" %kw% "的文件如下----- >>"c:\Users\xxx\out.txt"
+echo. >>"c:\Users\xxx\out.txt"
 
-for /f %%b in ('dir /ad /b') do echo [-]now find in %%b && echo [*]... && for /f  %%a in ('findstr /simd:%%b "%kw%" *.*') do echo %cd%%%b\%%a>>"C:\Users\eureka\Desktop\out1.txt" 
+for /f %%b in ('dir /ad /b') do echo [-]now find in %%b && echo [*]... && for /f  %%a in ('findstr /simd:%%b "%kw%" *.*') do echo %cd%%%b\%%a>>"c:\Users\xxx\out.txt" 
 
-echo. >>"C:\Users\eureka\Desktop\out1.txt" 
-echo ---------%time%  end------- >>"C:\Users\eureka\Desktop\out1.txt"
-echo =============================================================== >>"C:\Users\eureka\Desktop\out1.txt"
-echo. >>"C:\Users\eureka\Desktop\out1.txt"
+echo. >>"c:\Users\xxx\out.txt" 
+echo ---------%time%  end------- >>"c:\Users\xxx\out.txt"
+echo =============================================================== >>"c:\Users\xxx\out.txt"
+echo. >>"c:\Users\xxx\out.txt"
 echo [*]ok!end.now open the file
-C:\Users\eureka\Desktop\out1.txt
+c:\Users\xxx\out.txt
